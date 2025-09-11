@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F4EC"
+    tools:context=".OurProduct">
+
+    <!-- ScrollView untuk konten utama -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomMenu"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <ImageView
+                android:id="@+id/logoDesa"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/lokarasa"
+                android:background="@color/white"
+                android:contentDescription="Logo Desa"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp" />
+
+            <!-- Banner Gambar dengan Judul di Depan -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <!-- Gambar Banner -->
+                <ImageView
+                    android:id="@+id/bannerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg3" />
+
+                <!-- Overlay Gelap agar teks lebih jelas -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000" />
+
+                <!-- Judul dan Subjudul di Atas Banner -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:text="PRODUK UMKM DESA"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/subTitleProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:text="Produk Berkualitas Khas UMKM\nDesa Lokarasa"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Tombol Kategori -->
+            <LinearLayout
+                android:id="@+id/kategoriLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="12dp">
+
+                <Button
+                    android:id="@+id/btnJajanan"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#C9CCFF"
+                    android:text="JAJANAN &amp; KULINER"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/btnKerajinan"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#C9CCFF"
+                    android:text="KERAJINAN TANGAN"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnMinuman"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#C9CCFF"
+                android:text="MINUMAN"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_marginTop="12dp" />
+
+                <!-- Daftar Produk -->
+                <GridLayout
+                    android:id="@+id/gridProduk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins"
+                    android:useDefaultMargins="true"
+                    android:layout_marginTop="16dp"
+                    android:paddingHorizontal="12dp">
+
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM MENU -->
+        <LinearLayout
+            android:id="@+id/bottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:background="#E6E2D3"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:elevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Tombol 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:id="@+id/FavIcons"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/deco6"
+                    android:contentDescription="Menu 1" />
+            </LinearLayout>
+
+            <!-- Garis Pembatas -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="#888888"/>
+
+            <!-- Tombol 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:id="@+id/Homepage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/home"
+                    android:contentDescription="Home" />
+            </LinearLayout>
+
+            <!-- Garis Pembatas -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="#888888"/>
+
+            <!-- Tombol 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:id="@+id/ShopIcons"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/shop"
+                    android:contentDescription="Shop" />
+            </LinearLayout>
+
+            <!-- Garis Pembatas -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="#888888"/>
+
+            <!-- Tombol 4 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:id="@+id/NotesIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/deco5"
+                    android:contentDescription="Menu 4" />
+            </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

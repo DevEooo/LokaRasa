@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="purple_500">#FF6200EE</color>
+    <!--  Warna krem untuk latar belakang  -->
+    <color name="cream_background">#FFF8F0E5</color>
+    <!--  Warna untuk teks  -->
+    <color name="brown">#FF5D4037</color>
+    <!--  Warna untuk hint/placeholder  -->
+    <color name="hint_color">#FFA1887F</color>
+    <!--  Warna untuk border input  -->
+    <color name="input_border">#FFD7CCC8</color>
+    <!--  Warna untuk button  -->
+    <color name="button_brown">#FF795548</color>
+    <!--  Warna putih  -->
+</resources>

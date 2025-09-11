@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LokaRasa"
+        tools:targetApi="31">
+
+        <!-- Splash is the launcher now -->
+        <activity
+            android:name=".Splash"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login -->
+        <activity android:name=".Login"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa" />
+
+        <!-- Main -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa"/>
+
+        <!-- Register -->
+        <activity
+            android:name=".Register"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa"/>
+
+        <activity
+            android:name=".Home"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa"/>
+
+        <activity
+            android:name=".AddForm"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa"/>
+
+        <activity
+            android:name=".Favorite"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa"/>
+
+        <activity
+            android:name=".EditProduct"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa"/>
+
+        <activity
+            android:name=".OurProduct"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa"/>
+
+        <activity
+            android:name=".Article"
+            android:exported="true"
+            android:theme="@style/Theme.LokaRasa"/>
+    </application>
+
+</manifest>

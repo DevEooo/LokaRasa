@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F4EC"
+    tools:context=".Favorite">
+
+    <!-- SCROLL VIEW UNTUK KONTEN UTAMA -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomMenu"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logoDesa"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/lokarasa"
+                android:background="@color/white"
+                android:contentDescription="Logo Desa"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp" />
+
+            <!-- Banner dengan Judul -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <!-- Gambar Background -->
+                <ImageView
+                    android:id="@+id/bannerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg3" />
+
+                <!-- Overlay Gelap -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000" />
+
+                <!-- Teks Judul -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DAFTAR ITEM PRODUK"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
+
+                    <TextView
+                        android:id="@+id/subTitleProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kumpulan produk pilihan yang kamu tandai\nsebagai favorit untuk dilihat kembali dengan mudah"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Jumlah Barang -->
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:padding="8dp"
+                android:elevation="3dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#EBDCA9"
+                android:backgroundTintMode="src_over">
+
+                <TextView
+                    android:id="@+id/jumlahBarang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- LIST ITEM PRODUK -->
+            <LinearLayout
+                android:id="@+id/favoriteContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginTop="16dp">
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM MENU -->
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="#E6E2D3"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Ikon 1 -->
+        <ImageView
+            android:id="@+id/FavIcons"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/deco6"
+            android:contentDescription="Favorit" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="#888888" />
+
+        <!-- Ikon 2 -->
+        <ImageView
+            android:id="@+id/Homepage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/home"
+            android:contentDescription="Home" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="#888888" />
+
+        <!-- Ikon 3 -->
+        <ImageView
+            android:id="@+id/ShopIcons"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/shop"
+            android:contentDescription="Shop" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="#888888" />
+
+        <!-- Ikon 4 -->
+        <ImageView
+            android:id="@+id/NotesIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/deco5"
+            android:contentDescription="Catatan" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

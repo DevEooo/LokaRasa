@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "34177213322",
+    "firebase_url": "https://lokarasa-eaded-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "lokarasa-eaded",
+    "storage_bucket": "lokarasa-eaded.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34177213322:android:af710bae498c8320ec5e73",
+        "android_client_info": {
+          "package_name": "com.example.lokarasa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxjhxS-Vae17S-spGB4-KC9iru-mmhmbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

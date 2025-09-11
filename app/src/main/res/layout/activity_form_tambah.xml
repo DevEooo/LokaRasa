@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F4EC"
+    tools:context=".AddForm">
+
+    <!-- ScrollView agar konten bisa digeser ke bawah -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomMenu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Banner -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg3" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FORM TAMBAH PRODUK"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:shadowColor="#80000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4" />
+            </FrameLayout>
+
+            <!-- Gambar Produk -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gambar Produk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333" />
+
+            <ImageView
+                android:id="@+id/previewImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:background="#DDDDDD"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/btnUploadGambar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Pilih Gambar"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#48B4FF"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Nama Produk -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Produk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333" />
+
+            <EditText
+                android:id="@+id/etNamaProduk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Masukkan nama produk"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Harga Produk -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga Produk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333" />
+
+            <EditText
+                android:id="@+id/etHargaProduk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Masukkan harga produk"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Nama Toko -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Toko"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333" />
+
+            <EditText
+                android:id="@+id/etNamaToko"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Masukkan nama toko"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- No Telepon -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Telepon"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333" />
+
+            <EditText
+                android:id="@+id/etNoTelepon"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Masukkan nomor telepon"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Keterangan Produk -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keterangan Produk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333" />
+
+            <EditText
+                android:id="@+id/etKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Masukkan keterangan produk"
+                android:gravity="top"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Tombol Simpan dan Batal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/btnSimpan"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="SIMPAN"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#48B4FF"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnBatal"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="BATAL"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF4A4A"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Menu -->
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="#E6E2D3"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/FavIcons"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/deco6"
+            android:layout_marginHorizontal="16dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="#888888" />
+
+        <ImageView
+            android:id="@+id/Homepage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/home"
+            android:layout_marginHorizontal="16dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="#888888" />
+
+        <ImageView
+            android:id="@+id/ShopIcons"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/shop"
+            android:layout_marginHorizontal="16dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="#888888" />
+
+        <ImageView
+            android:id="@+id/NotesIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/deco5"
+            android:layout_marginHorizontal="16dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
